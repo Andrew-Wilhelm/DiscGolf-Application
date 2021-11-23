@@ -1,41 +1,44 @@
 #pragma once
 #include <string>
+#include <iostream>
 class Disc
 {
+	// Private Members
 private:
 	int m_speed;
 	int m_glide;
 	int m_turn;
 	int m_fade;
 	int m_weight;
-	//int m_maxDistance;
+	//int m_distance;
 	std::string m_name;
 
 public:
-	Disc(int weight, int speed = 9, int glide = 6, int turn = -2, int fade = 1) :m_weight(weight), m_speed(speed), m_glide(glide), m_turn(turn), m_fade(fade) {}
+	
+	// Virtual Function allows passing of this status function and goes to the satus function in the other classes.
+	virtual void stats()
+	{
+		std::cout << "\n Disc: " << std::endl;
+		std::cout << " Speed: NA" <<  std::endl;
+		std::cout << " Glide: NA" <<  std::endl;
+		std::cout << " Turn: NA" <<  std::endl;
+		std::cout << " Fade: NA" << std::endl;
+		std::cout << " Weight: NA" << "g" << std::endl;
+	}
+
+	// Pure Virtual Function
+	//virtual void distance() = 0;
+
+	Disc(std::string name, int weight, int speed, int glide, int turn, int fade) :m_name(name),m_weight(weight), m_speed(speed), m_glide(glide), m_turn(turn), m_fade(fade) {}
 	int get_speed() { return m_speed; }
-	void set_speed(int speed) { m_speed = speed; }
 	int get_glide() { return m_glide; }
 	int get_turn() { return m_turn; }
 	int get_fade() { return m_fade; }
 	int get_weight() { return m_weight; }
 	std::string get_name() { return m_name; }
-	void set_name(std::string name) { m_name = name; }
 	Disc() { m_name = "TBD"; }
 	Disc(std::string name) { m_name = name; }
 
 
-	int bestDisc(int distance) {
-		int x;
-		if (distance <= 100)
-		{
-			x = 1;
-		}
-		else if (distance >= 101)
-		{
-			x = 2;
-		}
-		return x;
-	}
 };
 

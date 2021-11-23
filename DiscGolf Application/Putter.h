@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <iostream>
 #include "Disc.h"
 //
 // Visibility Inheritance model
@@ -16,7 +17,27 @@ class Putter :
 private:
     //range 100
 public:
+    
     Putter() {}
-    Putter(std::string name) :Disc{ name } {}
+    Putter(std::string name, int weight, int speed, int glide, int turn, int fade) :Disc{ name, weight, speed, glide, turn, fade } {}
+
+
+	// redefined Virtual function: status from the base class Disc in the derived class Putter
+	// Will run instead of the Virtual Function thanks to runtime polymorphism
+	// Overriding the virtual according to the pointer set up in DiscGolf Application.cpp
+	void stats()
+	{
+		std::cout << "\n Putter: " << Disc::get_name() << std::endl;
+		std::cout << " Speed: " << Disc::get_speed() << std::endl;
+		std::cout << " Glide: " << Disc::get_glide() << std::endl;
+		std::cout << " Turn: " << Disc::get_turn() << std::endl;
+		std::cout << " Fade: " << Disc::get_fade() << std::endl;
+		std::cout << " Weight: " << Disc::get_weight() << "g" << std::endl;
+	}
+
+	void distance()
+	{
+
+	}
 };
 
