@@ -1,9 +1,18 @@
-// @file DiscGolf Application.cpp
-// DiscGolf Application.cpp : This file contains the 'main' function. Program execution begins and ends there.
-// @brief Help select a disc according to disatcne to basket and player rating.
-// @author Andrew Wilhelm
-// Bugs none as know
+/** @file DiscGolf Application.cpp
 
+ *  @brief This file contains the 'main' function. Program execution begins and ends there
+
+ *
+
+ *  Help select a disc according to disatcne to basket and player rating.
+
+ *
+
+ *  @author Andrew Wilhelm
+
+ *  @bug No known bugs.
+
+ */
 
 // LO4
 // Functional vs OOP
