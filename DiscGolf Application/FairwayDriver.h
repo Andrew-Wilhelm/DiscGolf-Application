@@ -1,4 +1,18 @@
-// @file FairwayDriver.h
+/** @file FairwayDriver.h
+
+ *  @brief This file contains the derived class FairwayDriver from disc
+
+ *
+
+ *  Has all the importants of the class FairwayDriver wise
+
+ *
+
+ *  @author Andrew Wilhelm
+
+ *  @bug No known bugs.
+
+ */
 #pragma once
 #include "Disc.h"
 class FairwayDriver :

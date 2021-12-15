@@ -1,4 +1,18 @@
-// @file MidRange.h
+/** @file MidRange.h
+
+ *  @brief This file contains the derived class midrange from disc
+
+ *
+
+ *  Has all the importants of the class midrange wise
+
+ *
+
+ *  @author Andrew Wilhelm
+
+ *  @bug No known bugs.
+
+ */
 #pragma once
 #include "Disc.h"
 class MidRange :

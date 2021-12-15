@@ -109,7 +109,12 @@ auto main()->int
 	}
 	return 0;
 }
-// base set of discs put into collection
+/** @brief base set of discs put into collection
+
+ *  
+ *  @return void
+
+ */
 void discCollection()
 {
 	std::cout << "------- Disc Collection -------" << std::endl;
@@ -151,7 +156,11 @@ void discCollection()
 
 }
 
-// disatnce per disc according to novice rating
+/** @brief disatnce per disc according to novice rating
+
+ *  @return void
+
+ */
 void discToDistanceNovice()
 {
 	int distance = NULL;
@@ -194,8 +203,11 @@ void discToDistanceNovice()
 
 }
 
-// disatnce per disc according to intermediate rating
+/** @brief disatnce per disc according to intermediate rating
 
+ *  @return void
+
+ */
 void discToDistanceIntermediate()
 {
 	int distance = NULL;
@@ -237,8 +249,11 @@ void discToDistanceIntermediate()
 
 }
 
-// disatnce per disc according to advanced rating
+/** @brief disatnce per disc according to advanced rating
 
+ *  @return void
+
+ */
 void discToDistanceAdvanced()
 {
 	int distance = NULL;
@@ -278,7 +293,19 @@ void discToDistanceAdvanced()
 
 }
 
-// Function that will be passed as an argument
+/** @brief Function that will be passed as an argument
+
+ *
+
+ *  Function that will be passed as an argument in order to meet requierments
+
+ *
+
+ *  @param int rating
+
+ *  @return string
+
+ */
 auto playerRating(int rating)->std::string
 {
 	if (rating == 0)
@@ -296,7 +323,18 @@ auto playerRating(int rating)->std::string
 		return "invalid Input";
 }
 
-// Passing the function as an argument
+/** @brief Passing the function as an argument
+
+
+ *  Passing the function as an argument for the requierments
+
+ *
+
+ *  @param int rating, the function player rating
+
+ *  @return string
+
+ */
 auto passedFunct(int rating, std::function<std::string(int)> func)->std::string
 {
 	return func(rating);

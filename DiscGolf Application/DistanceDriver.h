@@ -1,4 +1,18 @@
-// @file DistanceDiver
+/** @file DistanceDiver.h
+
+ *  @brief This file contains the derived class DistanceDiver from disc
+
+ *
+
+ *  Has all the importants of the class DistanceDiver wise
+
+ *
+
+ *  @author Andrew Wilhelm
+
+ *  @bug No known bugs.
+
+ */
 #pragma once
 #include "Disc.h"
 class DistanceDriver :

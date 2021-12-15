@@ -1,4 +1,18 @@
-// @file Putter.h
+/** @file Putter.h
+
+ *  @brief This file contains the derived class putter from disc
+
+ *
+
+ *  Has all the importants of the class puter wise
+
+ *
+
+ *  @author Andrew Wilhelm
+
+ *  @bug No known bugs.
+
+ */
 #pragma once
 #include <string>
 #include <iostream>

@@ -1,4 +1,18 @@
-// @file Disc.h
+/** @file Disc.h
+
+ *  @brief This file contains the super class disc 
+
+ *
+
+ *  Has all the importants of the classes
+
+ *
+
+ *  @author Andrew Wilhelm
+
+ *  @bug No known bugs.
+
+ */ 
 #pragma once
 #include <string>
 #include <iostream>
