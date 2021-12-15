@@ -1,2 +1,34 @@
-# DiscGolf-Application
-An Application to help decide on what disc to use
+# Project Title
+
+
+## Demonstration
+
+
+## Documentation
+
+
+## Diagrams
+
+
+## Getting Started
+
+
+## Built With
+
+
+## Contributing
+
+
+## Author
+
+
+## License
+
+
+## Acknowledgments
+
+
+## History
+
+
+## Key Programming Concepts Utilized
