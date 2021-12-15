@@ -1,0 +1,40 @@
+\hypertarget{_fairway_driver_8h_source}{}\doxysection{Fairway\+Driver.\+h}
+\label{_fairway_driver_8h_source}\index{C:/Users/Andrew Wilhelm/OneDrive -\/ Florida Gulf Coast University/Fall 2021/Prog 2/Disc Golf App/DiscGolf Application/DiscGolf Application/FairwayDriver.h@{C:/Users/Andrew Wilhelm/OneDrive -\/ Florida Gulf Coast University/Fall 2021/Prog 2/Disc Golf App/DiscGolf Application/DiscGolf Application/FairwayDriver.h}}
+\mbox{\hyperlink{_fairway_driver_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_disc_8h}{Disc.h}}"{}}}
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{class_fairway_driver}{FairwayDriver}} :}
+\DoxyCodeLine{19     \textcolor{keyword}{public} \mbox{\hyperlink{class_disc}{Disc}}}
+\DoxyCodeLine{20 \{}
+\DoxyCodeLine{21 \textcolor{keyword}{private}:}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \mbox{\hyperlink{class_fairway_driver}{FairwayDriver}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{27     \mbox{\hyperlink{class_fairway_driver}{FairwayDriver}}(std::string name, \textcolor{keywordtype}{int} weight, \textcolor{keywordtype}{int} speed, \textcolor{keywordtype}{int} glide, \textcolor{keywordtype}{int} turn, \textcolor{keywordtype}{int} fade) :\mbox{\hyperlink{class_disc}{Disc}}\{ name, weight, speed, glide, turn, fade \} \{\}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{comment}{// redefined Virtual function: status from the base class Disc in the derived class FairwayDriver}}
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} stats()\textcolor{keyword}{ override}}
+\DoxyCodeLine{32 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{33         \textcolor{comment}{// all the stats for a Fairway driver}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n Fairway Driver: "{}} << Disc::get\_name() << std::endl;}
+\DoxyCodeLine{36         std::cout << \textcolor{stringliteral}{"{} Speed: "{}} << Disc::get\_speed() << std::endl;}
+\DoxyCodeLine{37         std::cout << \textcolor{stringliteral}{"{} Glide: "{}} << Disc::get\_glide() << std::endl;}
+\DoxyCodeLine{38         std::cout << \textcolor{stringliteral}{"{} Turn: "{}} << Disc::get\_turn() << std::endl;}
+\DoxyCodeLine{39         std::cout << \textcolor{stringliteral}{"{} Fade: "{}} << Disc::get\_fade() << std::endl;}
+\DoxyCodeLine{40         std::cout << \textcolor{stringliteral}{"{} Weight: "{}} << Disc::get\_weight() << \textcolor{stringliteral}{"{}g"{}} << std::endl;}
+\DoxyCodeLine{41     \}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} distance()}
+\DoxyCodeLine{44     \{}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \}}
+\DoxyCodeLine{47 \};}
+\DoxyCodeLine{48 }
+
+\end{DoxyCode}
