@@ -1,6 +1,8 @@
+// @file DiscGolf Application.cpp
 // DiscGolf Application.cpp : This file contains the 'main' function. Program execution begins and ends there.
-// Purpose: Help select a disc according to disatcne to basket and player rating.
-// Author: Andrew Wilhelm
+// @brief Help select a disc according to disatcne to basket and player rating.
+// @author Andrew Wilhelm
+// Bugs none as know
 
 
 // LO4
@@ -21,7 +23,7 @@
 #include <functional>
 #include <iterator> // for iterators
 #include <vector> // for vectors
-#include "DistanceDriver.h"
+#include "DistanceDriver.h" 
 #include "FairwayDriver.h"
 #include "MidRange.h"
 #include "Putter.h"
