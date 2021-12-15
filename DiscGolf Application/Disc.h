@@ -1,8 +1,10 @@
 #pragma once
 #include <string>
 #include <iostream>
+//LO1.Designand implement a class.
 class Disc
 {
+	//LO6
 	// Private Members
 private:
 	int m_speed;
@@ -10,11 +12,12 @@ private:
 	int m_turn;
 	int m_fade;
 	int m_weight;
-	//int m_distance;
+	
 	std::string m_name;
 
 public:
 	
+	//LO1a
 	// Virtual Function allows passing of this status function and goes to the satus function in the other classes.
 	virtual void stats()
 	{

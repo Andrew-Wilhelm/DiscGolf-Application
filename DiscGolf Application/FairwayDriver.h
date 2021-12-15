@@ -1,20 +1,22 @@
 #pragma once
 #include "Disc.h"
 class FairwayDriver :
-    public Disc
+	public Disc
 {
 private:
-    
+
 public:
 
-    //range 350
-    FairwayDriver() {}
-    FairwayDriver(std::string name, int weight, int speed, int glide, int turn, int fade) :Disc{ name, weight, speed, glide, turn, fade } {}
+
+	FairwayDriver() = default;
+	FairwayDriver(std::string name, int weight, int speed, int glide, int turn, int fade) :Disc{ name, weight, speed, glide, turn, fade } {}
 
 
 	// redefined Virtual function: status from the base class Disc in the derived class FairwayDriver
-	void stats()
+	void stats() override
 	{
+		// all the stats for a Fairway driver
+
 		std::cout << "\n Fairway Driver: " << Disc::get_name() << std::endl;
 		std::cout << " Speed: " << Disc::get_speed() << std::endl;
 		std::cout << " Glide: " << Disc::get_glide() << std::endl;
