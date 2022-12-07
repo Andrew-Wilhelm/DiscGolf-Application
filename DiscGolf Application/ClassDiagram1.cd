@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Disc">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQADAGgQAAEAAAABAAAAAAAAAAAAAgCAAAAAQIAAAAA=</HashCode>
+      <FileName>Disc.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DistanceDriver">
+    <Position X="10" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAEABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DistanceDriver.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FairwayDriver">
+    <Position X="8" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAEAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FairwayDriver.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MidRange">
+    <Position X="6" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAEAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>MidRange.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Putter">
+    <Position X="4.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAEAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Putter.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

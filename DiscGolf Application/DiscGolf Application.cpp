@@ -37,12 +37,16 @@
 #include "MidRange.h"
 #include "Putter.h"
 #include "Disc.h"
+#include "Distances.h"
 
+
+auto main() -> int;
 
 void discCollection();
 void discToDistanceNovice();
 void discToDistanceIntermediate();
 void discToDistanceAdvanced();
+int getExperienceLevel();
 auto playerRating(int rating)->std::string;
 auto passedFunct(int rating, std::function<std::string(int)> func)->std::string;
 
@@ -53,15 +57,49 @@ auto main()->int
 {
 
 	discCollection();
+	
+	int ExperienceLvL = getExperienceLevel();
+	Distance holeDistance;
+	int out = 0;
+	while (out != 1)
+	{
+		// goes to the difficult rating previouse selected
+		if (ExperienceLvL == 0)
+		{
+			holeDistance.noviceDistance();
+		}
+		else if (ExperienceLvL == 1)
+		{
+			holeDistance.intermediateDistance();
+		}
+		else if (ExperienceLvL == 2)
+		{
+			holeDistance.advancedDistance();
+		}
+		else
+		{
+			std::cout << " invalid Input" << std::endl;
+			exit(0);
 
+		}
+
+
+
+		std::cout << " any other input to do another distance\n 1 to stop." << std::endl;
+		std::cin >> out;
+	}
+	return 0;
+}
+int getExperienceLevel() {
+
+	const int chartoint = 48;
 	char ratingA = NULL;
 	int rating = NULL;
-	const int chartoint = 48;
 	std::cout << " On a scale from 0 - 2, how good are you at disc golf: ";
 	std::cin >> ratingA;
 	if (isdigit(ratingA))		//checks if int
 	{
-		
+
 		rating = ratingA - chartoint;
 		if (rating >= 0 && rating <= 2)		//checks to see if int is within range
 		{
@@ -78,36 +116,7 @@ auto main()->int
 		std::cout << " invalid Input" << std::endl;
 		exit(0);
 	}
-
-	int out = 0;
-	while (out != 1)
-	{
-		// goes to the difficult rating previouse selected
-		if (rating == 0)
-		{
-			discToDistanceNovice();
-		}
-		else if (rating == 1)
-		{
-			discToDistanceIntermediate();
-		}
-		else if (rating == 2)
-		{
-			discToDistanceAdvanced();
-		}
-		else
-		{
-			std::cout << " invalid Input" << std::endl;
-			exit(0);
-
-		}
-
-
-
-		std::cout << " any other input to do another distance\n 1 to stop." << std::endl;
-		std::cin >> out;
-	}
-	return 0;
+	return rating;
 }
 /** @brief base set of discs put into collection
 
@@ -155,144 +164,6 @@ void discCollection()
 	disc4->stats();
 
 }
-
-/** @brief disatnce per disc according to novice rating
-
- *  @return void
-
- */
-void discToDistanceNovice()
-{
-	int distance = NULL;
-	const int zero = 0;
-	const int seventyfive = 75;
-	const int onehundredfifty = 150;
-	const int twofitty = 250;
-
-	//LO7
-	// use of iterators on aggregates, using the advance increment the iterator.
-	std::vector<std::string> ar = { "Putter: Wizard", "Midrange: Claymore", "Fairway Driver: Magician", "Distance Driver: Sapphire" };
-	auto ptr = ar.begin();
-
-	std::cout << " \nInput The Distance To The Basket In Feet" << std::endl;
-	std::cin >> distance;
-	if (distance >= zero && distance <= seventyfive)
-	{
-		advance(ptr, 0);
-		std::cout << "Use the " << *ptr << std::endl;
-	}
-	else if (distance > seventyfive && distance <= onehundredfifty)
-	{
-		advance(ptr, 1);
-		std::cout << "Use the " << *ptr << std::endl;
-	}
-	else if (distance > onehundredfifty && distance <= twofitty)
-	{
-		advance(ptr, 2);
-		std::cout << "Use the " << *ptr << std::endl;
-	}
-	else if (distance > twofitty)
-	{
-		advance(ptr, 3);
-		std::cout << "Use the " << *ptr << std::endl;
-	}
-	else
-	{
-		std::cout << "Not valid input" << std::endl;
-	}
-
-}
-
-/** @brief disatnce per disc according to intermediate rating
-
- *  @return void
-
- */
-void discToDistanceIntermediate()
-{
-	int distance = NULL;
-	const int hundo = 100;
-	const int twofitty = 250;
-	const int threefitty = 350;
-
-
-	// use of iterators on aggregates, using the advance increment the iterator.
-	std::vector<std::string> ar = { "Putter: Wizard", "Midrange: Claymore", "Fairway Driver: Magician", "Distance Driver: Sapphire" };
-	auto ptr = ar.begin();
-
-	std::cout << " \nInput The Distance To The Basket In Feet" << std::endl;
-	std::cin >> distance;
-	if (distance >= 0 && distance <= hundo)
-	{
-		advance(ptr, 0);
-		std::cout << "Use the " << *ptr << std::endl;
-	}
-	else if (distance > hundo && distance <= twofitty)
-	{
-		advance(ptr, 1);
-		std::cout << "Use the " << *ptr << std::endl;
-	}
-	else if (distance > twofitty && distance <= threefitty)
-	{
-		advance(ptr, 2);
-		std::cout << "Use the " << *ptr << std::endl;
-	}
-	else if (distance > threefitty)
-	{
-		advance(ptr, 3);
-		std::cout << "Use the " << *ptr << std::endl;
-	}
-	else
-	{
-		std::cout << "Not valid input" << std::endl;
-	}
-
-}
-
-/** @brief disatnce per disc according to advanced rating
-
- *  @return void
-
- */
-void discToDistanceAdvanced()
-{
-	int distance = NULL;
-	const int onehundredfifty = 150;
-	const int twofitty = 250;
-	const int fourfitty = 450;
-	// use of iterators on aggregates, using the advance increment to increment the iterator.
-	std::vector<std::string> ar = { "Putter: Wizard", "Midrange: Claymore", "Fairway Driver: Magician", "Distance Driver: Sapphire" };
-	auto ptr = ar.begin();
-
-	std::cout << " \nInput The Distance To The Basket In Feet" << std::endl;
-	std::cin >> distance;
-	if (distance >= 0 && distance <= onehundredfifty)
-	{
-		advance(ptr, 0);
-		std::cout << "Use the " << *ptr << std::endl;
-	}
-	else if (distance > onehundredfifty && distance <= twofitty)
-	{
-		advance(ptr, 1);
-		std::cout << "Use the " << *ptr << std::endl;
-	}
-	else if (distance > twofitty && distance <= fourfitty)
-	{
-		advance(ptr, 2);
-		std::cout << "Use the " << *ptr << std::endl;
-	}
-	else if (distance > fourfitty)
-	{
-		advance(ptr, 3);
-		std::cout << "Use the " << *ptr << std::endl;
-	}
-	else
-	{
-		std::cout << "Not valid input" << std::endl;
-	}
-
-}
-
 /** @brief Function that will be passed as an argument
 
  *

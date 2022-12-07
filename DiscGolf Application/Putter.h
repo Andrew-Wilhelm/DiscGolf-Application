@@ -51,8 +51,5 @@ public:
 		std::cout << " Weight: " << Disc::get_weight() << "g" << std::endl;
 	}
 
-	void distance()
-	{
-
-	}
+	
 };

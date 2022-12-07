@@ -51,4 +51,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd">
+      <Filter>Header Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>
